@@ -1,0 +1,29 @@
+.appBar {
+  box-shadow: none;
+  max-width: 100%;
+
+}
+
+.title {
+  flex-grow: 1;
+  align-items: center;
+  display: flex;
+  text-decoration: none;
+  font-weight: 400 !important;
+  font-size: 15px !important;
+  
+  
+}
+
+.image {
+  margin-right: 10px;
+}
+
+.grow {
+  flex-grow: 1;
+}
+
+.toolbar {
+  background: linear-gradient(to bottom, #0F0, 90%, black);
+  
+}

@@ -1,0 +1,21 @@
+.bannerMedia {
+  width: 700px;
+  max-width: 90%;
+  margin-left: 10px;
+  margin-right: 10px;
+  border-radius: 3rem;
+  height: 350px !important;
+  border: rgb(59, 59, 59) solid 1px;
+  justify-content: center !important;
+}
+
+.bannerBackground {
+  
+  background-color: inherit !important;
+  height: 400px;
+  margin-bottom: 10px;
+  display: flex !important;
+}
+
+
+
