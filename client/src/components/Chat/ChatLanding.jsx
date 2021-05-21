@@ -1,26 +1,37 @@
 import React, { useState } from 'react';
-import ChatBox from './Chat';
+import Chat from './Chat';
+import './chat.css';
 
 const ChatLanding = () => {
-  const [name, setName] = useState('');
-  const [room, setRoom] = useState('');
+  const [chatName, setChatName] = useState('');
+
+  const [showChat, setChat] = useState(false);
+
+
 
   const BeforeJoin = () => (
     <div>
-      <div>
-        <h1>Join</h1>
-        <form>
-          <div><input placeholder="Name" className="joinInput" type="text" onChange={(event) => setName(event.target.value)} /></div>
-          <div><input placeholder="Room" className="joinInput" type="text" onChange={(event) => setRoom(event.target.value)} /></div>
-          <button> Sign in </button>
-        </form>
-      </div>
-    </div>
+      <h1>Join</h1>
+      <form>
+        <div>
+          <input
+            placeholder="Enter Name"
+            type="text"
+            value={chatName}
+            onChange={(event) => setChatName(event.target.value)}
+            autoFocus
+            required
+          />
+        </div>
+
+        <button type="submit" onClick={() => setChat(true)}> Sign in </button>
+      </form>
+    </div >
   );
 
   const AfterJoin = () => (
     <div>
-      <ChatBox />
+      <Chat name={chatName} />
     </div>
 
   )
@@ -28,11 +39,10 @@ const ChatLanding = () => {
 
 
   return (
-    <div>
-      <BeforeJoin />
+    <div className="chatMain">
+      {!showChat ? <BeforeJoin /> : <AfterJoin />}
 
     </div>
   )
 }
-
 export default ChatLanding;
