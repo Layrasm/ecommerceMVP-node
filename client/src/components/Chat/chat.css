@@ -1,5 +1,11 @@
-.chatMain {
+.chatOuter {
   height: 500px;
   width: 400px;
   background-color: white;
+}
+
+.chatInner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }

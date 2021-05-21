@@ -16,16 +16,15 @@ const Ticker = () => {
   });
 
 
-
   useEffect(() => {
     async function getDogecoinPrice() {
       const { data } = await axios.get(
-        'https://nitinr-cors.herokuapp.com/https://api.wazirx.com/api/v2/tickers/dogeusdt'
+        'https://cors-anywhere.herokuapp.com/https://api.wazirx.com/api/v2/tickers/dogeusdt'
       );
       setTicker(data.ticker);
     }
     getDogecoinPrice();
-    setInterval(() => getDogecoinPrice(), 1000);
+    setInterval(() => getDogecoinPrice(), 10000);
   }, []);
 
   return (

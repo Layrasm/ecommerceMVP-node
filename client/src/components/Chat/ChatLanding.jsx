@@ -10,7 +10,7 @@ const ChatLanding = () => {
 
 
   const BeforeJoin = () => (
-    <div>
+    <>
       <h1>Join</h1>
       <form>
         <div>
@@ -26,22 +26,23 @@ const ChatLanding = () => {
 
         <button type="submit" onClick={() => setChat(true)}> Sign in </button>
       </form>
-    </div >
+    </ >
   );
 
   const AfterJoin = () => (
-    <div>
+    <>
       <Chat name={chatName} />
-    </div>
+    </>
 
   )
 
 
 
   return (
-    <div className="chatMain">
-      {!showChat ? <BeforeJoin /> : <AfterJoin />}
-
+    <div className="chatOuter">
+      <div className="chatInner">
+        {!showChat ? <BeforeJoin /> : <AfterJoin />}
+      </div>
     </div>
   )
 }
