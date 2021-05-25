@@ -1,16 +1,17 @@
 import React, { useState, useEffect } from 'react';
 import Products from './Products/Products';
 import Navbar2 from './Navbar/Navbar';
-import Banner from './Banner/Banner';
+
 import '../App.css';
 import { commerce } from '../lib/commerce';
 import Cart from './Cart/Cart';
 import { Route, Switch } from "react-router-dom";
 import Checkout from './Checkout/Checkout';
 import Ticker from './Ticker/Ticker';
-import CarouselHeader from './Carousel/CarouselHeader';
+import ImageCarousel from './Carousel/ImageCarousel';
 import { Grid } from '@material-ui/core';
-import ChatLanding from './Chat/ChatLanding';
+import Chat from './Chat/Chat';
+
 
 
 
@@ -63,12 +64,13 @@ const Home = () => {
       <Navbar2 totalItems={cart.total_items} />
       <Switch>
         <Route exact path="/">
-          <CarouselHeader />
+          <ImageCarousel />
           <Grid container className="mainMedia">
-            <ChatLanding />
+            <Chat />
             <Ticker />
           </Grid>
-          <Banner />
+
+
           <Products products={products} onAddToCart={handleAddToCart} />
         </Route>
         <Route exact path="/cart">

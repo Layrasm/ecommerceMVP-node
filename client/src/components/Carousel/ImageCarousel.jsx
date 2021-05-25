@@ -5,7 +5,7 @@ import './carousel.css';
 import carouselHat from '../../assets/carousel-hat.png';
 import carouselBag from '../../assets/carousel-bag.png';
 
-const CarouselHeader = () => {
+const ImageCarousel = () => {
   var items = [
     {
       name: "hats",
@@ -27,4 +27,4 @@ const CarouselHeader = () => {
   )
 }
 
-export default CarouselHeader;
+export default ImageCarousel;
