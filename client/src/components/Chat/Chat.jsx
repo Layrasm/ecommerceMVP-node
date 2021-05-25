@@ -47,7 +47,7 @@ const Chat = () => {
       <form onSubmit={onMessageSubmit}>
         <h1>Messenger</h1>
         <div className="name-field">
-          <TextField name="name" onChange={(e) => onTextChange(e)} value={state.name} label="Name" />
+          <TextField name="name" required onChange={(e) => onTextChange(e)} value={state.name} label="Name" />
         </div>
         <div>
           <TextField
@@ -57,6 +57,7 @@ const Chat = () => {
             id="outlined-multiline-static"
             variant="outlined"
             label="Message"
+            required
           />
         </div>
         <button>Send Message</button>

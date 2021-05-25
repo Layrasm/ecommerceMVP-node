@@ -19,7 +19,7 @@ const Ticker = () => {
   useEffect(() => {
     async function getDogecoinPrice() {
       const { data } = await axios.get(
-        'https://cors-anywhere.herokuapp.com/https://api.wazirx.com/api/v2/tickers/dogeusdt'
+        'https://corsanywhere.herokuapp.com/https://api.wazirx.com/api/v2/tickers/dogeusdt'
       );
       setTicker(data.ticker);
     }
