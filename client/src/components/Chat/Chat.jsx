@@ -35,37 +35,51 @@ const Chat = () => {
   const renderChat = () => {
     return chat.map(({ name, message }, index) => (
       <div key={index}>
-        <h3>
-          {name}: <span>{message}</span>
-        </h3>
+        <div>
+          {name}: {message}
+        </div>
       </div>
     ))
   }
 
   return (
     <div className="card">
+      <div className="chatHeader">Live Chat</div>
+      <div className="render-chat">
+        {renderChat()}</div>
       <form onSubmit={onMessageSubmit}>
-        <h1>Messenger</h1>
-        <div className="name-field">
-          <TextField name="name" required onChange={(e) => onTextChange(e)} value={state.name} label="Name" />
+        <div className="newMessageHeader">What's on your mind?</div>
+        <div>
+          <TextField
+            className="nameField"
+            name="name"
+            required
+            onChange={(e) => onTextChange(e)}
+            value={state.name}
+            label="Name"
+            fullWidth
+            autoComplete='off'
+
+
+          />
+
         </div>
         <div>
           <TextField
+            className="messageField"
             name="message"
             onChange={(e) => onTextChange(e)}
             value={state.message}
             id="outlined-multiline-static"
-            variant="outlined"
             label="Message"
+            autoComplete="off"
             required
+            fullWidth
+            multiline="true"
           />
         </div>
         <button>Send Message</button>
       </form>
-      <div className="render-chat">
-        <h1>Chat Log</h1>
-        {renderChat()}
-      </div>
     </div>
   )
 }
