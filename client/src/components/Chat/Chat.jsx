@@ -75,7 +75,6 @@ const Chat = () => {
             autoComplete="off"
             required
             fullWidth
-            multiline="true"
           />
         </div>
         <button>Send Message</button>

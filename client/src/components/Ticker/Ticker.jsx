@@ -16,16 +16,16 @@ const Ticker = () => {
   });
 
 
-  useEffect(() => {
-    async function getDogecoinPrice() {
-      const { data } = await axios.get(
-        'https://corsanywhere.herokuapp.com/https://api.wazirx.com/api/v2/tickers/dogeusdt'
-      );
-      setTicker(data.ticker);
-    }
-    getDogecoinPrice();
-    setInterval(() => getDogecoinPrice(), 10000);
-  }, []);
+  // useEffect(() => {
+  //   async function getDogecoinPrice() {
+  //     const { data } = await axios.get(
+  //       'https://corsanywhere.herokuapp.com/https://api.wazirx.com/api/v2/tickers/dogeusdt'
+  //     );
+  //     setTicker(data.ticker);
+  //   }
+  //   getDogecoinPrice();
+  //   setInterval(() => getDogecoinPrice(), 10000);
+  // }, []);
 
   return (
     <div className="tickerMain">
