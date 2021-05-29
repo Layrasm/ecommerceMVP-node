@@ -27,7 +27,6 @@
 .cardRoot {
   max-width: 100%;
   border: rgb(82, 82, 82) solid 1px !important;
-  background-color: rgb(31, 31, 31) !important;
   background: linear-gradient(to top, rgb(31, 31, 31), 99%, rgb(83, 83, 83)) !important;
   height: 100%;
   border-radius: 1rem !important;
@@ -57,7 +56,6 @@
     background: linear-gradient(to top, black, 88%, rgb(105, 105, 105)) !important;
     border-style: outset !important;
     border-width: 1px !important;
-    border-color: #78ff78 !important;
     border-radius: 8px !important;
     color: #00FF00 !important;
     padding: 8px 15px !important;

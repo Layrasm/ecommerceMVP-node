@@ -4,7 +4,7 @@
 }
 
 .home {
-  background: linear-gradient(to top, black, 94%, rgb(105, 105, 105));
+  background: black;
   height: 100% ;
   width: 100%;
   overflow-x: hidden;
@@ -16,8 +16,18 @@
 .mainMedia {
   padding-top: 100px;
   align-items: flex-end;
+  
 
 
   
 }
 
+.mediaBackground {
+  background: linear-gradient(
+    to top,
+    rgba(0,0,0, 0), 95%,
+    rgba(0,0,0, 100)
+    
+  ),url('./assets/moon-background.jpeg') no-repeat fixed center ;
+
+}

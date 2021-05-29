@@ -9,9 +9,10 @@ import { Route, Switch } from "react-router-dom";
 import Checkout from './Checkout/Checkout';
 import Ticker from './Ticker/Ticker';
 import ImageCarousel from './Carousel/ImageCarousel';
-import { Grid, Container } from '@material-ui/core';
+import { Grid, Container, Typography } from '@material-ui/core';
 import Chat from './Chat/Chat';
 import BottomBanner from './Banner/BottomBanner';
+import MediaBanner from './Banner/MediaBanner';
 
 
 
@@ -66,18 +67,22 @@ const Home = () => {
       <Switch>
         <Route exact path="/">
           <ImageCarousel />
-          <Grid container className="mainMedia">
-            <Grid item xs={12} sm={6}>
-              <Chat />
+          <div className="mediaBackground">
+            <MediaBanner />
+            <Grid container justify="center" className="mainMedia">
+              <Grid item xs={12} sm={6} md={5}>
+                <Chat />
+              </Grid>
+              <Grid align="center" item xs={12} sm={6} md={5}>
+                <Ticker />
+                <BottomBanner />
+              </Grid>
             </Grid>
-            <Grid item xs={12} sm={6}>
-              <Ticker />
-              <BottomBanner />
-            </Grid>
-          </Grid>
 
+          </div>
 
           <Products products={products} onAddToCart={handleAddToCart} />
+
         </Route>
         <Route exact path="/cart">
           <Cart
