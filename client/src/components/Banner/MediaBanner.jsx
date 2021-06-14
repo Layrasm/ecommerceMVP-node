@@ -8,10 +8,10 @@ import elon from '../../assets/elon.png';
 const MediaBanner = () => {
   return (
     <Grid className="mediaContainer" container>
-      <Grid item>
+      <Grid item xs={12}>
         <img className="elonImage" src={elon} />
       </Grid>
-      <Grid item>
+      <Grid item xs={12}>
         <img className="mediaBanner" src={mediaBanner} />
       </Grid>
     </Grid>

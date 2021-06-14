@@ -69,11 +69,11 @@ const Home = () => {
           <ImageCarousel />
           <div className="mediaBackground">
             <MediaBanner />
-            <Grid container justify="center" className="mainMedia">
-              <Grid item xs={12} sm={6} md={5}>
+            <Grid container justify="center" className="mainMedia" spacing={1}>
+              <Grid item xs={12} sm={6} md={5} lg={4}>
                 <Chat />
               </Grid>
-              <Grid align="center" item xs={12} sm={6} md={5}>
+              <Grid align="center" item xs={12} sm={6} md={5} lg={4}>
                 <Ticker />
                 <BottomBanner />
               </Grid>

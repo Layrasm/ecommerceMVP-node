@@ -23,11 +23,10 @@
 }
 
 .mediaBackground {
-  background: linear-gradient(
-    to top,
-    rgba(0,0,0, 0), 95%,
-    rgba(0,0,0, 100)
-    
-  ),url('./assets/moon-background.jpeg') no-repeat fixed center ;
+  
+  background: 
+  url('./assets/moon-background.jpeg') no-repeat fixed center top 60px;
+
+  
 
 }
