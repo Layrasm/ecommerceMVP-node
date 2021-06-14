@@ -4,7 +4,6 @@ import CarouselItem from './CarouselItem';
 import './carousel.css';
 import carouselHat from '../../assets/carousel-hat.png';
 import carouselBag from '../../assets/carousel-bag.png';
-import elon from '../../assets/elon.png';
 import { Grid, Paper } from '@material-ui/core';
 import brandName from '../../assets/brand-name.png';
 
@@ -32,9 +31,6 @@ const ImageCarousel = () => {
         <Carousel autoPlay={false}>
           {items.map((item, i) => <CarouselItem key={i} item={item} />)}
         </Carousel>
-      </Grid>
-      <Grid item>
-        <img className="elonImage" src={elon} />
       </Grid>
     </Grid>
   )
