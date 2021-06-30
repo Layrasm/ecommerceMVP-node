@@ -68,21 +68,23 @@ const Home = () => {
         <Route exact path="/">
           <ImageCarousel />
           <div className="mediaBackground">
+
             <MediaBanner />
-            <Grid container justify="center" className="mainMedia" spacing={1}>
-              <Grid item xs={12} sm={6} md={5} lg={4}>
+
+            <Grid container justify="space-around" className="mainMedia" spacing={1}>
+              <Grid item align="center" xs={12} sm={8} md={5} lg={5}>
                 <Chat />
               </Grid>
-              <Grid align="center" item xs={12} sm={6} md={5} lg={4}>
+              <Grid item align="center" item xs={12} sm={8} md={5} lg={5}>
                 <Ticker />
                 <BottomBanner />
               </Grid>
             </Grid>
 
+
+
+            <Products products={products} onAddToCart={handleAddToCart} />
           </div>
-
-          <Products products={products} onAddToCart={handleAddToCart} />
-
         </Route>
         <Route exact path="/cart">
           <Cart

@@ -23,11 +23,11 @@ const ImageCarousel = () => {
   return (
     <Grid container spacing={4} className="carouselRoot">
 
-      <Grid item xs={12} sm={8} md={4}>
+      <Grid item xs={12} sm={10} md={8} lg={4}>
         <img className="brandName" src={brandName} />
       </Grid>
 
-      <Grid item xs={12} sm={8} md={4}>
+      <Grid item xs={12} sm={10} md={8} lg={4}>
         <Carousel autoPlay={false}>
           {items.map((item, i) => <CarouselItem key={i} item={item} />)}
         </Carousel>
