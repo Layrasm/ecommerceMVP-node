@@ -4,7 +4,7 @@ import CarouselItem from './CarouselItem';
 import './carousel.css';
 import carouselHat from '../../assets/carousel-hat.png';
 import carouselBag from '../../assets/carousel-bag.png';
-import { Grid, Paper } from '@material-ui/core';
+import { Grid } from '@material-ui/core';
 import brandName from '../../assets/brand-name.png';
 
 const ImageCarousel = () => {

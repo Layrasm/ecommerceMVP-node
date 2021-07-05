@@ -1,6 +1,7 @@
 .carouselRoot {
   display: flex;
   justify-content: center;
+  padding-top: 100px;
   
 
   
@@ -13,11 +14,10 @@
   
 }
 
+
 .carouselContent {
   
-  padding-top: 100px;
-  
-  width: 100%;
+  max-width: 100%;
   background: transparent !important;
   display: flex;
   flex-direction: column;
@@ -48,11 +48,12 @@
 
 
 .brandName {
-  margin-top: 400px;
+  margin-top: 250px;
   transform: rotate(340deg) translateY(-100%);
   max-width: 100%;
   padding-left: 50px;
 }
+
 
 .carouselBox {
   max-width: 100%;
